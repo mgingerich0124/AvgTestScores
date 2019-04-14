@@ -1,0 +1,38 @@
+#Test Average and Grade
+
+#Enter 5 test scores
+test1 = int(input('Enter score 1: '))
+test2 = int(input('Enter score 2: '))
+test3 = int(input('Enter score 3: '))
+test4 = int(input('Enter score 4: '))
+test5 = int(input('Enter score 5: '))
+
+total =(test1 + test2 + test3 + test4 + test5)
+
+    #Calculate average
+    def calc_average(total):
+        return total / 5
+
+    #Grading scale
+    def determine_score(grade):
+        if 90 <= grade <= 100:
+            return 'A'
+        elif 80 <= grade <= 89:
+            return 'B'
+        elif 70 <= grade <= 79:
+            return 'C'
+        elif 60 <= grade <= 69:
+            return 'D'
+        else:
+            return 'F'
+
+    grade = total
+    avg = calc_average(total)
+    abc_grade = determine_score(grade)
+
+    print("Score 1:", determine_score(test1)) 
+    print("Score 2:", determine_score(test2)) 
+    print("Score 3:", determine_score(test3)) 
+    print("Score 4:", determine_score(test4)) 
+    print("Score 5:", determine_score(test5)) 
+    print("The average grade is: %s which is a(n): %s " % (str(avg), abc_grade))
